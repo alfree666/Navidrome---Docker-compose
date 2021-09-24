@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navi
+    restart: unless-stopped
+    ports:
+      - "8200:4533"
+    environment:
+      - ND_SCANINTERVAL=1m
+      - ND_LOGLEVEL=info
+      - ND_PORT=4533
+      - ND_TRANSCODINGCACHESIZE=100MB
+      - ND_SESSIONTIMEOUT=24h
+    volumes:
+      - "./data:/data"
+      - "./music:/music:ro"
