@@ -15,5 +15,5 @@ services:
       - ND_TRANSCODINGCACHESIZE=100MB
       - ND_SESSIONTIMEOUT=24h
     volumes:
-      - "./data:/data"
-      - "./music:/music:ro"
+      - "./navidrome/data:/data"
+      - "./navidrome/music:/music:ro"
